@@ -1,0 +1,20 @@
+KNN is a supervised machine learning algorithm is used for binary as well as multi class classification problem especially in the field of economic forecasting, data compression and genetics.
+Distance metrics like euclidean distance or Manhatten distance or similarity matrices like cosine matrix is used here.It can be used for both classification and regression
+A query point in KNN is classified to which class it belongs based on the majority vote in the chosen value of K(nearest neighbors). 
+The neighbors are known from the distance matrices used majorly Euclidean distance (also known as L2 norm).
+We would be splitting our dataset given to train and test dataset basically but here to determine the right value of K we would split the dataset given in to train,cross validation, test datasets(preferably 60%,20%,20% respectively).
+After a model is trained using the train dataset we would be using cross validation dataset in order to test the model using different values of K and cross validation accuracy is obtained for every value of K 
+, and the right value of K is the one with highest accuracy.
+
+Bias — variance trade off:
+Case-1: If the value of K is very low.
+        As the value of K is very low it could label the query points as the point near to it only small points are taken into consideration so there is a chance for high variance(which is also known as over fitting), 
+        In high variance training error is low but testing error is very high comparatively.
+Case-2:If the value of K is very high in fact almost equal to number of datapoints.
+        As the value of K is very high it could mostly label the query point as the class label which is majority in the given dataset. 
+        so there is a chance for high bias(which is also known as under fitting), In high bias both training error and testing error is very high.
+Case-3: If the value of K is neither high nor low and obtained correctly using cross validation data accuracy then it is a good balance with out high bias and variance.
+
+
+Computationally expensive and High memory requirement, because the algorithm stores all of the training data. Prediction stage might be slow (with big N)
+
